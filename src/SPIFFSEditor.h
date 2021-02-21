@@ -1,5 +1,11 @@
 #ifndef SPIFFSEditor_H_
 #define SPIFFSEditor_H_
+
+#ifdef USE_LITTLEFS
+#define SPIFFS LittleFS
+#include <LittleFS.h>
+#endif
+
 #include <ESPAsyncWebServer.h>
 
 class SPIFFSEditor: public AsyncWebHandler {
